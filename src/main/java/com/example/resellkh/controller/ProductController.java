@@ -56,7 +56,7 @@ public class ProductController {
         request.setCondition(condition);
 
         ProductWithFilesDto savedProduct = productService.uploadProductWithCategoryName(request, files);
-        savedProduct.setCategoryName(categoryName); // 🔥 Set the category name in the response
+        savedProduct.setCategoryName(categoryName); 
 
         return ResponseEntity.status(HttpStatus.CREATED).body(
                 new ApiResponse<>(

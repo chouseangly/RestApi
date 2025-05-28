@@ -60,7 +60,7 @@ public class ProductController {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(
                 new ApiResponse<>(
-                        "✅ Product uploaded successfully",
+                        " Product uploaded successfully",
                         savedProduct,
                         HttpStatus.CREATED.value(),
                         LocalDateTime.now()
@@ -73,7 +73,7 @@ public class ProductController {
         ProductWithFilesDto dto = productService.getProductWithFilesById(id);
         return ResponseEntity.ok(
                 ApiResponse.<ProductWithFilesDto>builder()
-                        .message("\u2705 Product with files fetched")
+                        .message(" Product with files fetched")
                         .payload(dto)
                         .status(HttpStatus.OK)
                         .timestamp(LocalDateTime.now())
@@ -86,7 +86,7 @@ public class ProductController {
         List<ProductWithFilesDto> list = productService.getAllProductsWithFiles();
         return ResponseEntity.ok(
                 ApiResponse.<List<ProductWithFilesDto>>builder()
-                        .message("\u2705 All products with files fetched")
+                        .message(" All products with files fetched")
                         .payload(list)
                         .status(HttpStatus.OK)
                         .timestamp(LocalDateTime.now())
